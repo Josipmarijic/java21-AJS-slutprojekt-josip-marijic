@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }  from 'react';
+import Products from './Products';
+import Cart from './Cart'
+import Loggin from './Loggin';
+
+const productPage = 'products';
+const cartPage = 'cart';
+const logginPage = 'logginpage'  
 
 function App() {
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(logginPage);
+  const [totalProducts, setTotalProducts] = useState(0)
+
+  const navigateTo = (newPage) => {
+    if (page === logginPage) {
+      setPage(newPage);
+    } else if (page === productPage){
+      setPage(newPage);
+    } else if (page === cartPage) {
+      setPage(newPage);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   {page === productPage && ( <Products cart={cart} setCart={setCart} navigateTo={navigateTo} totalProducts={totalProducts} setTotalProducts={setTotalProducts}/>)}
+   {page === cartPage && (<Cart cart={cart} setCart={setCart} navigateTo={navigateTo} totalProducts={totalProducts} setTotalProducts={setTotalProducts} />)}
+   {page === logginPage && (<Loggin navigateTo={navigateTo}/>)}
+   </>  
   );
 }
 
