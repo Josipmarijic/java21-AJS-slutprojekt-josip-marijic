@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/java21-AJS-slutprojekt-josip-marijic/static/css/main.e6c13ad2.css",
+    "main.js": "/java21-AJS-slutprojekt-josip-marijic/static/js/main.abe174c7.js",
+    "index.html": "/java21-AJS-slutprojekt-josip-marijic/index.html",
+    "main.e6c13ad2.css.map": "/java21-AJS-slutprojekt-josip-marijic/static/css/main.e6c13ad2.css.map",
+    "main.abe174c7.js.map": "/java21-AJS-slutprojekt-josip-marijic/static/js/main.abe174c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.abe174c7.js"
+  ]
+}
