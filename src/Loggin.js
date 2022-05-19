@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
 
-export default function Loggin({ navigateTo }) {
-    const [inputUsername, setInputUsername] = useState('')
-    const [inputPassword, setInputPassword] = useState('')
+
+export default function Loggin({ navigateTo, inputPassword, setInputPassword, inputUsername, setInputUsername }) {
+    
 
     const users = [
         {

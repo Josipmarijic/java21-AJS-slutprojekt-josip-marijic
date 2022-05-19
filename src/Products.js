@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import data from './Data'
 
 
-const Products = ({cart, setCart, navigateTo}) => {
+const Products = ({cart, setCart, navigateTo, inputUsername}) => {
   const [productData] = useState(data.productData)
 
   const addToCart = (product) => {
@@ -12,6 +12,7 @@ const Products = ({cart, setCart, navigateTo}) => {
 return (
   <>
     <h1>Produkter</h1>
+    <h2>Välkommen {inputUsername}</h2>
 
     <button onClick={()=> navigateTo('logginpage')}>Logga ut</button>
     <button onClick={() => navigateTo('cart')}>Kundvagn ({cart.length})</button>
